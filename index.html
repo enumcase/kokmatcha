@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kök matcha жуырда</title>
+    <meta name="description" content="Матчамыз бен сайтымызды әзірлеп жатырмыз">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            min-height: 100vh;
+            background: 
+                radial-gradient(ellipse 80% 60% at 20% 20%, #B8D63E 0%, rgba(184, 214, 62, 0.4) 40%, transparent 80%),
+                radial-gradient(ellipse 70% 50% at 80% 15%, #4F772D 0%, rgba(79, 119, 45, 0.6) 35%, transparent 70%),
+                radial-gradient(ellipse 120% 80% at 50% 60%, #8FB032 0%, rgba(143, 176, 50, 0.3) 60%, transparent 100%),
+                linear-gradient(180deg, #C3DD45 0%, #9BC235 20%, #8FB032 35%, #A8C73A 45%, #E8F2C1 55%, #F5F1E8 65%, #F5F1E8 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .background-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.05;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.25) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo {
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            font-weight: 700;
+            color: #F5F2E8;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .logo .gradient-text {
+            background: linear-gradient(135deg, 
+                rgba(245, 242, 232, 0.9) 0%, 
+                rgba(232, 242, 193, 0.95) 30%, 
+                rgba(184, 214, 62, 0.85) 60%, 
+                rgba(245, 242, 232, 0.9) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            color: #F5F2E8;
+            line-height: 1.6;
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .spotify-link {
+            color: #F5F2E8;
+            text-decoration: none;
+            font-weight: 400;
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .spotify-link:hover {
+            color: rgba(245, 242, 232, 0.8);
+            border-bottom-color: rgba(245, 242, 232, 0.4);
+        }
+
+        .spotify-link::after {
+            content: '↗';
+            font-size: 0.8em;
+            margin-left: 4px;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+                margin-bottom: 2rem;
+            }
+            
+            .coming-soon-badge {
+                font-size: 0.8rem;
+                padding: 0.4rem 1.2rem;
+            }
+        }
+
+        /* Smooth loading animation */
+        .container {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-pattern"></div>
+    
+    <div class="container">
+        <h1 class="logo">
+            <div>kök mat<span class="gradient-text">cha</span></div>
+            <div>жуырда.</div>
+        </h1>
+        <p class="subtitle">
+            Матчамыз бен сайтымызды әзірлеп жатырмыз, оғай дейін 
+            <a href="https://open.spotify.com/album/6GnmYVW58qNf4GifcptQnx?si=htq4Z6H4QhG79AwRtZHEQA" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="spotify-link">мына</a> 
+            керемет әндерді тыңдай тұрыңыздар
+        </p>
+    </div>
+</body>
+</html>
