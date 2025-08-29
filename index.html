@@ -83,21 +83,20 @@
         }
 
         .spotify-link {
-            color: #F5F2E8;
+            color: #F5F2E8 !important;
             text-decoration: none;
-            font-weight: 500;
-            border-bottom: 1px solid rgba(245, 242, 232, 0.3);
+            font-weight: 400;
+            border-bottom: 1px solid rgba(245, 242, 232, 0.4);
             transition: all 0.3s ease;
             position: relative;
             cursor: pointer;
         }
 
         .spotify-link:hover {
-            color: #B8D63E;
-            border-bottom-color: #B8D63E;
-            transform: translateY(-1px);
+            color: rgba(245, 242, 232, 0.8);
+            border-bottom-color: rgba(245, 242, 232, 0.6);
         }
-
+        
         .spotify-link::after {
             content: '↗';
             font-size: 0.8em;
@@ -155,5 +154,22 @@
             керемет әндерді тыңдай тұрыңыз
         </p>
     </div>
+
+    <script>
+        // Hide link preview completely
+        document.addEventListener('DOMContentLoaded', function() {
+            const spotifyLink = document.querySelector('.spotify-link');
+            const originalHref = spotifyLink.href;
+            
+            // Remove href entirely to prevent any status bar text
+            spotifyLink.removeAttribute('href');
+            spotifyLink.style.cursor = 'pointer';
+            
+            spotifyLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.open(originalHref, '_blank', 'noopener,noreferrer');
+            });
+        });
+    </script>
 </body>
 </html>
