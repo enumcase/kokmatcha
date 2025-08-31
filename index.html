@@ -137,6 +137,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="background-pattern"></div>
     
@@ -146,7 +147,7 @@
             <div>жуырда.</div>
         </h1>
         <p class="subtitle">
-            Матчамыз бен сайтымызды әзірлеп жатырмыз, оғай дейін 
+            Матчамыз бен сайтымызды әзірлеп жатырмыз, оған дейін 
             <a href="https://open.spotify.com/album/6GnmYVW58qNf4GifcptQnx?si=htq4Z6H4QhG79AwRtZHEQA" 
                target="_blank" 
                rel="noopener noreferrer" 
@@ -155,21 +156,7 @@
         </p>
     </div>
 
-    <script>
-        // Hide link preview completely
-        document.addEventListener('DOMContentLoaded', function() {
-            const spotifyLink = document.querySelector('.spotify-link');
-            const originalHref = spotifyLink.href;
-            
-            // Remove href entirely to prevent any status bar text
-            spotifyLink.removeAttribute('href');
-            spotifyLink.style.cursor = 'pointer';
-            
-            spotifyLink.addEventListener('click', function(e) {
-                e.preventDefault();
-                window.open(originalHref, '_blank', 'noopener,noreferrer');
-            });
-        });
-    </script>
+    <script src="app.js"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
