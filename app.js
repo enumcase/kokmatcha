@@ -1,0 +1,1 @@
+!function(){document.addEventListener('DOMContentLoaded',function(){var e=document.querySelector('.spotify-link'),n=e.href;e.removeAttribute('href'),e.style.cursor='pointer',e.addEventListener('click',function(e){e.preventDefault(),window.open(n,'_blank','noopener,noreferrer')})}),window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)}}();
